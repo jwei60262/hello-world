@@ -8,10 +8,23 @@ GitLab 社区版的 [readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master
 
 The Bitnami GitLab CE [Stack](https://bitnami.com/stack/gitlab)
 
+Bitnami [gitlab docs](https://docs.bitnami.com/virtual-machine/apps/gitlab/)
+
 ## MOAC ##
 
 [MOAC](http://www.moacchina.net/)
 
-[MOACChain/moac-core](https://github.com/MOACChain/moac-core/wiki)
+Github [MOACChain/moac-core](https://github.com/MOACChain/moac-core/wiki)
 
-[bitnami gitlab docs](https://docs.bitnami.com/virtual-machine/apps/gitlab/)
+## Git ##
+
+git -c http.sslVerify=false clone 'url'
+
+git config --system --unset credential.helper
+
+git config --global user.name "wei"
+git config --global user.email "zxll760606@sina.com"
+
+git config --global http.sslVerify false  
+
+git push -u origin master
