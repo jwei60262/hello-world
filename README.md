@@ -28,3 +28,11 @@ git config --global user.email "zxll760606@sina.com"
 git config --global http.sslVerify false  
 
 git push -u origin master
+
+## Vagrant ##
+
+[Vagrant](https://www.vagrantup.com/downloads.html)
+
+## VirtualBox ##
+
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
