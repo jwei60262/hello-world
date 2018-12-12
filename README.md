@@ -10,6 +10,14 @@ The Bitnami GitLab CE [Stack](https://bitnami.com/stack/gitlab)
 
 Bitnami [gitlab docs](https://docs.bitnami.com/virtual-machine/apps/gitlab/)
 
+To see the current IP address, execute the following command at the server console after logging in:
+
+	sudo ifconfig
+
+If no IP address is assigned,try reloading the IP address by executing the command below.
+
+	sudo /etc/init.d/networking force-reload
+
 ## MOAC ##
 
 [MOAC](http://www.moacchina.net/)
@@ -36,3 +44,28 @@ git push -u origin master
 ## VirtualBox ##
 
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+## Linux Shell Command ##
+
+	出现 > 时,用 ' 补全.也可以尝试 /
+	history
+	man ls
+	man cowsay
+	apropos
+	man apropos
+	curl http://udacity.github.io/ud595-shell/stuff.zip -o things.zip
+	unzip things.zip
+	expr 2 + 2
+	hostname
+	host udacity.com
+	date
+	cat .ssh
+
+	ping 8.8.8.8
+	ctrl + C
+	
+	sort
+	bb
+	cc
+	aa
+	ctrl + D
