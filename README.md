@@ -26,16 +26,16 @@ Github [MOACChain/moac-core](https://github.com/MOACChain/moac-core/wiki)
 
 ## Git ##
 
-git -c http.sslVerify=false clone 'url'
-
-git config --system --unset credential.helper
-
-git config --global user.name "wei"
-git config --global user.email "zxll760606@sina.com"
-
-git config --global http.sslVerify false  
-
-git push -u origin master
+	git -c http.sslVerify=false clone 'url'
+	
+	git config --system --unset credential.helper
+	
+	git config --global user.name "wei"
+	git config --global user.email "zxll760606@sina.com"
+	
+	git config --global http.sslVerify false  
+	
+	git push -u origin master
 
 ## Vagrant ##
 
