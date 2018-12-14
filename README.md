@@ -1,5 +1,9 @@
 # DOCS #
 
+## DistroWatch ##
+
+[DistroWatch](https://distrowatch.com/)
+
 ## GitLab ##
 
 ### GitLab ###
@@ -88,6 +92,13 @@ Existing Git repository
 
 [Vagrant](https://www.vagrantup.com/downloads.html)
 
+	vagrant status
+	vagrant suspend
+	vagrant up
+	vagrant ssh
+	vagrant halt
+	vagrant destroy
+
 ## VirtualBox ##
 
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -97,6 +108,8 @@ Existing Git repository
 [Cheatsheet of less's Keyboard](http://sheet.shiar.nl/less)
 
 [Introduction to Regular Expressions](http://codular.com/regex)
+
+	logout
 
 	出现 > 时,用 ' 补全.也可以尝试 /
 	ls *pp*
@@ -162,3 +175,5 @@ Existing Git repository
 	cp
 
 	echo
+
+	cat /etc/apt/sources.list
