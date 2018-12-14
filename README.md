@@ -99,6 +99,18 @@ Existing Git repository
 [Introduction to Regular Expressions](http://codular.com/regex)
 
 	出现 > 时,用 ' 补全.也可以尝试 /
+	ls *pp*
+	ls p*png
+	ls app.{css,html}
+	ls app.css app.html
+	ls *{jpg,JPG}
+
+	ls be[ae]r.png
+	bear.png beer.png
+
+	ls bea?.png
+	bean.png bear.png (A single question mark matches any one character.)
+
 	history
 	man ls
 	man cowsay
@@ -140,3 +152,13 @@ Existing Git repository
 	nano
 
 	pwd
+	cd /
+	cd ..
+
+	mdkir
+	mv
+	rm
+	rmdir
+	cp
+
+	echo
