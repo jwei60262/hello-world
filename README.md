@@ -1,5 +1,9 @@
 # DOCS #
 
+## 菜鸟教程 ##
+
+[Runoob](http://www.runoob.com/)
+
 ## DistroWatch ##
 
 [DistroWatch](https://distrowatch.com/)
@@ -103,12 +107,21 @@ Existing Git repository
 
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
+## Ubuntu ##
+
+### Ubuntu packages ###
+
+[Ubuntu.com/](https://packages.ubuntu.com/)
+
+[Sudoers](https://help.ubuntu.com/community/Sudoers)
+
 ## Linux Shell Command ##
 
 [Cheatsheet of less's Keyboard](http://sheet.shiar.nl/less)
 
 [Introduction to Regular Expressions](http://codular.com/regex)
 
+	cat /etc/issue
 	logout
 
 	出现 > 时,用 ' 补全.也可以尝试 /
@@ -177,3 +190,90 @@ Existing Git repository
 	echo
 
 	cat /etc/apt/sources.list
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get autoremove
+
+	sudo apt-get install finger
+	finger
+	finger vagrant
+	cat /etc/passwd
+	username:password:UID:GID:UID info:home directory:command/shell
+
+	sudo adduser student
+	ssh student@127.0.0.1 -p 2222
+	sudo cat /etc/sudoers (查看哪些用户有root权限,可以执行sudo 命令)
+	sudo ls /etc/sudoers.d
+	sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student
+
+	(client)
+	ssh keygen
+
+	(server)
+	mkdir .ssh
+	touch .ssh/authorized_keys
+	nano .ssh/authorized_keys
+	chmod 700 .ssh
+	chmod 644 .ssh/authorized_keys
+
+	(log with ssh)
+	ssh student@127.0.0.1 -p 2222 -i ~/.ssh/id_rsa
+
+	sudo nano /etc/ssh/sshd_config
+	sudo service ssh restart
+
+File permissions
+
+<table>
+  <tr>
+    <td>Read</td>
+	<td>Write</td>
+	<td>Execute</td>
+  </tr>
+  <tr>
+    <td>r = 4</td>
+	<td>w = 2</td>
+	<td>x = 1</td>
+  </tr>
+  <tr>
+    <td>r = 0</td>
+	<td>w = 0</td>
+	<td>x = 0</td>
+  </tr>
+</table>
+
+	chmod 641 .ssh/authorized_keys
+
+<table>
+  <tr>
+    <td>Owner</td>
+	<td>Group</td>
+	<td>Everyone</td>
+  </tr>
+  <tr>
+    <td>rw-</td>
+	<td>r--</td>
+	<td>--x</td>
+  </tr>
+  <tr>
+    <td>4+2+0=6</td>
+	<td>4+0+0=4</td>
+	<td>0+0+1=1</td>
+  </tr>
+  <tr>
+    <td>Octal 6</td>
+	<td>Octal 4</td>
+	<td>Octal 1</td>
+  </tr>
+</table>
+
+Ports
+
+	HTTP 80 HTTPS 443 SSH 22
+	FTP 21 POP3 110 SMTP 25
+
+Firewalls
+
+	sudo ufw status
+	sudo ufw default deny incoming
+	sudo ufw default allow outgoing
