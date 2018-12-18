@@ -188,11 +188,16 @@ Existing Git repository
 	cp
 
 	echo
+	echo $PATH
+
+更新软件
 
 	cat /etc/apt/sources.list
 	sudo apt-get update
 	sudo apt-get upgrade
 	sudo apt-get autoremove
+
+安装finger,查看用户信息
 
 	sudo apt-get install finger
 	finger
@@ -200,11 +205,17 @@ Existing Git repository
 	cat /etc/passwd
 	username:password:UID:GID:UID info:home directory:command/shell
 
+创建新用户,为用户授权
+
 	sudo adduser student
 	ssh student@127.0.0.1 -p 2222
-	sudo cat /etc/sudoers (查看哪些用户有root权限,可以执行sudo 命令)
+	sudo cat /etc/sudoers (查看哪些用户有root权限,可以执行sudo命令)
 	sudo ls /etc/sudoers.d
 	sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student
+
+SSH 远程登录
+
+	sudo apt-get install openssh-server
 
 	(client)
 	ssh keygen
@@ -220,7 +231,10 @@ Existing Git repository
 	ssh student@127.0.0.1 -p 2222 -i ~/.ssh/id_rsa
 
 	sudo nano /etc/ssh/sshd_config
+	设置以禁止使用passwd登录
 	sudo service ssh restart
+	(or)
+	/etc/init.d/ssh start
 
 File permissions
 
@@ -242,7 +256,7 @@ File permissions
   </tr>
 </table>
 
-	chmod 641 .ssh/authorized_keys
+	chmod 641 .ssh/authorized_keys (更改文件权限)
 
 <table>
   <tr>
@@ -271,9 +285,14 @@ Ports
 
 	HTTP 80 HTTPS 443 SSH 22
 	FTP 21 POP3 110 SMTP 25
+	cat /etc/ssh/sshd_config 查看ssh端口
 
 Firewalls
 
 	sudo ufw status
 	sudo ufw default deny incoming
 	sudo ufw default allow outgoing
+	sudo ufw allow ssh
+	sudo ufw allow 22/tcp
+	sudo ufw allow www
+	sudo ufw enable
