@@ -1,5 +1,7 @@
 # DOCS #
 
+[![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
+
 ## 菜鸟教程 ##
 
 [Runoob](http://www.runoob.com/)
@@ -19,6 +21,10 @@
 GitLab 社区版的 [readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master) 文件
 
 GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
+
+[Maintenance commands](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)
+
+Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
 
 ### Bitnami GitLab ###
 
