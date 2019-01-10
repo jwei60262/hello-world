@@ -32,10 +32,6 @@ The Bitnami GitLab CE [Stack](https://bitnami.com/stack/gitlab)
 
 Bitnami [gitlab docs](https://docs.bitnami.com/virtual-machine/apps/gitlab/)
 
-To see the current IP address, execute the following command at the server console after logging in:
-
-	sudo ifconfig
-
 If no IP address is assigned,try reloading the IP address by executing the command below.
 
 	sudo /etc/init.d/networking force-reload
@@ -302,3 +298,16 @@ Firewalls
 	sudo ufw allow 22/tcp
 	sudo ufw allow www
 	sudo ufw enable
+
+## Netcat ##
+
+	sudo apt-get install netcat-openbsd tcpdump traceroute mtr
+
+	man nc
+	CLIENT/SERVER MODEL
+	nc -l 1234
+	nc 192.168.10.1 1234
+
+	printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+
+	sudo lsof -i
