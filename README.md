@@ -299,6 +299,10 @@ Firewalls
 	sudo ufw allow www
 	sudo ufw enable
 
+Configure A Static IP Address
+
+[configure-static-address](https://docs.bitnami.com/virtual-machine/faq/configuration/configure-static-address/)
+
 ## Netcat ##
 
 	sudo apt-get install netcat-openbsd tcpdump traceroute mtr
@@ -311,3 +315,35 @@ Firewalls
 	printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
 
 	sudo lsof -i
+
+## Webmin ##
+
+[![](https://img.shields.io/badge/webmin-blue.svg)](http://www.webmin.com/)
+
+[install-webmin](https://docs.bitnami.com/virtual-machine/faq/configuration/install-webmin/)
+
+	wget
+
+## IPv4 address space ##
+
+[Here's a visualization of the entire IPv4 address space](http://lh3.googleusercontent.com/cFkfL3BjjIW6M4uaoBBaJqrCeyhtvivrJIPunhze7JFmUy5ezsaMEkoF2T1pspYRSYD-gMZzUBwKSf3yI73i=s0)
+
+[Reserved IP addresses](https://classroom.udacity.com/courses/ud256/lessons/7118148621/concepts/72314704150923)
+
+[test-ipv6](http://test-ipv6.com/)
+
+	ip addr show
+
+Find your default gateway
+
+	ip route show default
+	netstat -nr
+
+Private address netblocks
+
+	10.0.0.0/8
+	172.16.0.0/12
+	192.168.0.0/16
+
+
+
