@@ -26,15 +26,21 @@ GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
 
 Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
 
-### Bitnami GitLab ###
-
-The Bitnami GitLab CE [Stack](https://bitnami.com/stack/gitlab)
-
-Bitnami [gitlab docs](https://docs.bitnami.com/virtual-machine/apps/gitlab/)
+## Bitnami GitLab ##
 
 If no IP address is assigned,try reloading the IP address by executing the command below.
 
 	sudo /etc/init.d/networking force-reload
+
+[Start Or Stop Services](https://docs.bitnami.com/virtual-machine/apps/mediawiki/administration/control-services/)
+
+## CMS ##
+
+## Mediawiki ##
+
+https://bitnami.com/stack/mediawiki/installer
+
+https://bitnami.com/stack/mediawiki/README.txt
 
 ## MOAC ##
 
@@ -192,6 +198,8 @@ Existing Git repository
 	echo
 	echo $PATH
 
+	find / -iname LocalSettings.php -print
+
 更新软件
 
 	cat /etc/apt/sources.list
@@ -285,7 +293,7 @@ File permissions
 
 Ports
 
-	HTTP 80 HTTPS 443 SSH 22
+	HTTP 80 HTTPS 443 SSH 22 DNS 53
 	FTP 21 POP3 110 SMTP 25
 	cat /etc/ssh/sshd_config 查看ssh端口
 
@@ -316,13 +324,19 @@ Configure A Static IP Address
 
 	sudo lsof -i
 
-## Webmin ##
+## Linux tools ##
 
-[![](https://img.shields.io/badge/webmin-blue.svg)](http://www.webmin.com/)
+### Webmin ###
+
+[webmin](http://www.webmin.com/)
 
 [install-webmin](https://docs.bitnami.com/virtual-machine/faq/configuration/install-webmin/)
 
-	wget
+### wget ###
+
+	wget http://prdownloads.sourceforge.net/webadmin/webmin_1.900_all.deb
+
+### scp ###
 
 ## IPv4 address space ##
 
