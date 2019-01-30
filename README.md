@@ -131,20 +131,20 @@ Existing Git repository
 
 	cat /etc/issue
 	logout
-
+	
 	出现 > 时,用 ' 补全.也可以尝试 /
 	ls *pp*
 	ls p*png
 	ls app.{css,html}
 	ls app.css app.html
 	ls *{jpg,JPG}
-
+	
 	ls be[ae]r.png
 	bear.png beer.png
-
+	
 	ls bea?.png
 	bean.png bear.png (A single question mark matches any one character.)
-
+	
 	history
 	man ls
 	man cowsay
@@ -156,7 +156,7 @@ Existing Git repository
 	hostname
 	host udacity.com
 	date
-
+	
 	cat test.txt
 	diff
 	less test.txt
@@ -166,7 +166,7 @@ Existing Git repository
 	/ string or expressions (search)
 	n (next occurrence)
 	N (previous occurrence)
-
+	
 	ping 8.8.8.8
 	ctrl + C
 	
@@ -175,29 +175,29 @@ Existing Git repository
 	ccc
 	aaa
 	ctrl + D
-
+	
 	bc
 	2+3*4
 	ctrl + D
-
+	
 	vim
 	emacs
 	joe
 	nano
-
+	
 	pwd
 	cd /
 	cd ..
-
+	
 	mdkir
 	mv
 	rm
 	rmdir
 	cp
-
+	
 	echo
 	echo $PATH
-
+	
 	find / -iname LocalSettings.php -print
 
 更新软件
@@ -226,20 +226,20 @@ Existing Git repository
 SSH 远程登录
 
 	sudo apt-get install openssh-server
-
+	
 	(client)
 	ssh keygen
-
+	
 	(server)
 	mkdir .ssh
 	touch .ssh/authorized_keys
 	nano .ssh/authorized_keys
 	chmod 700 .ssh
 	chmod 644 .ssh/authorized_keys
-
+	
 	(log with ssh)
 	ssh student@127.0.0.1 -p 2222 -i ~/.ssh/id_rsa
-
+	
 	sudo nano /etc/ssh/sshd_config
 	设置以禁止使用passwd登录
 	sudo service ssh restart
@@ -314,14 +314,14 @@ Configure A Static IP Address
 ## Netcat ##
 
 	sudo apt-get install netcat-openbsd tcpdump traceroute mtr
-
+	
 	man nc
 	CLIENT/SERVER MODEL
 	nc -l 1234
 	nc 192.168.10.1 1234
-
+	
 	printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
-
+	
 	sudo lsof -i
 
 ## Linux tools ##
@@ -359,5 +359,20 @@ Private address netblocks
 	172.16.0.0/12
 	192.168.0.0/16
 
+## tcpdump
 
+```
+sudo tcpdump -n host 8.8.8.8
+ping -c3 8.8.8.8
+```
+
+```
+sudo tcpdump -n port 53
+ping yahoo.com
+```
+
+```
+sudo tcpdump -n port 80
+printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' |nc example.net 80
+```
 
