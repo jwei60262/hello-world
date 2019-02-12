@@ -311,19 +311,6 @@ Configure A Static IP Address
 
 [configure-static-address](https://docs.bitnami.com/virtual-machine/faq/configuration/configure-static-address/)
 
-## Netcat ##
-
-	sudo apt-get install netcat-openbsd tcpdump traceroute mtr
-	
-	man nc
-	CLIENT/SERVER MODEL
-	nc -l 1234
-	nc 192.168.10.1 1234
-	
-	printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
-	
-	sudo lsof -i
-
 ## Linux tools ##
 
 ### Webmin ###
@@ -359,7 +346,22 @@ Private address netblocks
 	172.16.0.0/12
 	192.168.0.0/16
 
-## tcpdump
+## Netcat ##
+
+```
+sudo apt-get install netcat-openbsd tcpdump traceroute mtr
+
+man nc
+CLIENT/SERVER MODEL
+nc -l 1234
+nc 192.168.10.1 1234
+
+printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+
+sudo lsof -i
+```
+
+## Tcpdump
 
 ```
 sudo tcpdump -n host 8.8.8.8
@@ -375,4 +377,3 @@ ping yahoo.com
 sudo tcpdump -n port 80
 printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' |nc example.net 80
 ```
-
