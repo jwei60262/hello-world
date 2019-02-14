@@ -325,6 +325,16 @@ Configure A Static IP Address
 
 ### scp ###
 
+## SMTP
+
+发送电子邮件的协议：SMTP
+
+接收电子邮件的协议：IMAP、POP
+
+IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上，消息可以在多个设备上同步和访问。
+
+POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
+
 ## IPv4 address space ##
 
 [Here's a visualization of the entire IPv4 address space](http://lh3.googleusercontent.com/cFkfL3BjjIW6M4uaoBBaJqrCeyhtvivrJIPunhze7JFmUy5ezsaMEkoF2T1pspYRSYD-gMZzUBwKSf3yI73i=s0)
