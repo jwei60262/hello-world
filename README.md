@@ -198,7 +198,7 @@ Existing Git repository
 	echo
 	echo $PATH
 	
-	find / -iname LocalSettings.php -print
+	sudo find / -iname LocalSettings.php -print
 
 更新软件
 
