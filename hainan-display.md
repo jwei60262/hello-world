@@ -30,15 +30,12 @@
 ### 自主可控区块链底层平台
 
 - BCOS区块链
-
   - 负责人：马国峻
   - BCOS github上提及的贡献
-
   - BCOS开具的应用证明
   - 隐私保护，可监管
 
 - Maskash匿名计算链
-
   - 负责人：李经纬、卫延冻
   - github上Maskash文档完善
   - 以命令行或脚本方式演示匿名计算链
@@ -57,18 +54,15 @@
 ### 区块链+，应用场景
 
 - BCOS金融应用
-
   - 负责人：韩董、卫佳
 
 - 纸贵
-
   - 负责人：韩董、卫佳
-
-  - 溯源方案
+  - 溯源方案 https://banquan.zhigui.com/ https://www.iqiyi.com/w_19s2z6uq0d.html?pltfm=11&pos=title
   - 资产交易
+  - Bass https://baas.zhigui.com/index
 
 - 航信
-
   - 负责人：韩董、卫佳
   - 区块链电子发票系统
   - 系统访问地址：http://61.183.200.174:9072/CloudWebServer/login.htm 账户密码找卫佳要。
