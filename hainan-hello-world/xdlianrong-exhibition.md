@@ -29,7 +29,7 @@
   - 隐私保护，可监管
 - Maskash匿名计算链
   - 负责人：李经纬、卫延冻
-  - github上Maskash文档完善
+  - github上Maskash文档完善 github.com/XDLRDEV/Maskash
   - 以命令行或脚本方式演示匿名计算链
 
 ### 社会治理，深度参与
