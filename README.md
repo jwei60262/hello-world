@@ -325,6 +325,10 @@ Configure A Static IP Address
 
 ### scp ###
 
+```
+scp -r devops@192.168.10.2:/opt/lampp/ d:/
+```
+
 ## SMTP
 
 发送电子邮件的协议：SMTP
