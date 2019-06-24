@@ -391,3 +391,14 @@ ping yahoo.com
 sudo tcpdump -n port 80
 printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' |nc example.net 80
 ```
+
+## Install google play
+
+```
+1.Google 服务框架
+2.Google Play Services
+3.Play Store
+```
+
+
+
