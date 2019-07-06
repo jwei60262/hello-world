@@ -42,11 +42,9 @@ https://bitnami.com/stack/mediawiki/installer
 
 https://bitnami.com/stack/mediawiki/README.txt
 
-## MOAC ##
+## npm 中文文档 ##
 
-[MOAC](http://www.moacchina.net/)
-
-Github [MOACChain/moac-core](https://github.com/MOACChain/moac-core/wiki)
+<https://www.npmjs.cn/>
 
 ## Git ##
 
