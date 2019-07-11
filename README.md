@@ -1,9 +1,12 @@
 # Desktop clean
 1. .ssh
-2. local git file
-3. download
-4. weixin
-5. 桌面文档
+2. ss
+3. chrome logout
+4. chrome clean syn item
+5. local git file
+6. /download
+7. /weixin
+8. 桌面文档
 # DOCS #
 
 [![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
