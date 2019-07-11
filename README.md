@@ -1,3 +1,9 @@
+# Desktop clean
+1. .ssh
+2. local git file
+3. download
+4. weixin
+5. 桌面文档
 # DOCS #
 
 [![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
