@@ -5,8 +5,9 @@
 4. chrome clean syn item
 5. local git file
 6. /download
-7. /weixin
-8. 桌面文档
+7. 我的文档
+8. /weixin
+9. 桌面文档
 # DOCS #
 
 [![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
