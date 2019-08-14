@@ -110,18 +110,21 @@ Existing Git repository
 
 ## Vagrant ##
 
-[Vagrant](https://www.vagrantup.com/downloads.html)
+1. Install VirtualBox . [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)
+2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
+3. Download the VM configuration file. The configuration file, called `Vagrantfile`, is here: [**Download!**](https://www.udacity.com/api/nodes/4713348570/supplemental_media/vagrantfile/download)
+4.  Run the virtual machine! 
 
+	cd
+	Then start the VM by running the command `vagrant up`.
+	Once it is done, run the command `vagrant ssh`.
+	
 	vagrant status
 	vagrant suspend
 	vagrant up
 	vagrant ssh
 	vagrant halt
 	vagrant destroy
-
-## VirtualBox ##
-
-[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 ## Ubuntu ##
 
@@ -346,6 +349,10 @@ scp -r devops@192.168.10.2:/opt/lampp/ d:/
 IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上，消息可以在多个设备上同步和访问。
 
 POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
+
+## PKI
+
+SSH HTTPS SSL TSL
 
 ## IPv4 address space ##
 
