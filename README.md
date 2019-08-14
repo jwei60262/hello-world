@@ -199,14 +199,7 @@ Existing Git repository
 	
 	sudo find / -iname LocalSettings.php -print
 
-更新软件
-
-	cat /etc/apt/sources.list
-	sudo apt-get update
-	sudo apt-get upgrade
-	sudo apt-get autoremove
-
-安装finger,查看用户信息
+**安装finger,查看用户信息**
 
 	sudo apt-get install finger
 	finger
@@ -214,7 +207,7 @@ Existing Git repository
 	cat /etc/passwd
 	username:password:UID:GID:UID info:home directory:command/shell
 
-创建新用户,为用户授权
+**创建新用户,为用户授权**
 
 	sudo adduser student
 	ssh student@127.0.0.1 -p 2222
@@ -222,7 +215,9 @@ Existing Git repository
 	sudo ls /etc/sudoers.d
 	sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student
 
-SSH 远程登录
+[Sudoers](https://help.ubuntu.com/community/Sudoers)
+
+**SSH 远程登录**
 
 	sudo apt-get install openssh-server
 	
@@ -245,7 +240,7 @@ SSH 远程登录
 	(or)
 	/etc/init.d/ssh start
 
-File permissions
+**File permissions**
 
 <table>
   <tr>
@@ -290,13 +285,13 @@ File permissions
   </tr>
 </table>
 
-Ports
+**Ports**
 
 	HTTP 80 HTTPS 443 SSH 22 DNS 53
 	FTP 21 POP3 110 SMTP 25
 	cat /etc/ssh/sshd_config 查看ssh端口
 
-Firewalls
+**Firewalls**
 
 	sudo ufw status
 	sudo ufw default deny incoming
@@ -306,7 +301,7 @@ Firewalls
 	sudo ufw allow www
 	sudo ufw enable
 
-Configure A Static IP Address
+**Configure A Static IP Address**
 
 [configure-static-address](https://docs.bitnami.com/virtual-machine/faq/configuration/configure-static-address/)
 
