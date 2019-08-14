@@ -102,7 +102,7 @@ Existing Git repository
 	git push -u origin --all
 	git push -u origin --tags
 
-### SSH key ###
+## SSH key ##
 
 [Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
@@ -112,19 +112,7 @@ Existing Git repository
 
 1. Install VirtualBox . [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)
 2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
-3. Download the VM configuration file. The configuration file, called `Vagrantfile`, is here: [**Download!**](https://www.udacity.com/api/nodes/4713348570/supplemental_media/vagrantfile/download)
-4.  Run the virtual machine! 
-
-	cd
-	Then start the VM by running the command `vagrant up`.
-	Once it is done, run the command `vagrant ssh`.
-	
-	vagrant status
-	vagrant suspend
-	vagrant up
-	vagrant ssh
-	vagrant halt
-	vagrant destroy
+3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
 
 ## Ubuntu ##
 
@@ -409,11 +397,9 @@ printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' |nc example.net 80
 
 ## Install google play
 
-```
-1.Google 服务框架
-2.Google Play Services
-3.Play Store
-```
+1. Google 服务框架
+2. Google Play Services
+3. Play Store
 
 
 
