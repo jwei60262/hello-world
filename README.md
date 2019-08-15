@@ -12,9 +12,25 @@
 
 [![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
 
-## 菜鸟教程 ##
+## Docker
 
-[Runoob](http://www.runoob.com/)
+https://docs.docker.com/install/linux/docker-ce/centos/
+
+https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
+
+**Configure Docker to start on boot**
+
+```
+sudo systemctl enable docker 
+sudo systemctl disable docker
+```
+
+**Start Docker**
+
+```
+sudo systemctl start docker
+sudo systemctl status docker
+```
 
 ## DistroWatch ##
 
@@ -320,7 +336,11 @@ Existing Git repository
 ### scp ###
 
 ```
+putty:
 scp -r devops@192.168.10.2:/opt/lampp/ d:/
+
+git bash:
+scp -r C:/Users/wj/Downloads/gerrit-2.15.1.war weijia@192.168.44.132:/home/weijia
 ```
 
 ## SMTP
