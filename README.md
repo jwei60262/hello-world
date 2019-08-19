@@ -130,7 +130,17 @@ Existing Git repository
 2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
 3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
 
-## Ubuntu ##
+## CentOS ##
+
+禅道开机启动
+
+```
+echo '/opt/zbox/zbox restart' >> /etc/rc.local
+chmod +x /etc/rc.d/rc.local
+reboot
+```
+
+## Ubuntu
 
 ### Ubuntu packages ###
 
