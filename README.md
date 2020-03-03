@@ -346,12 +346,9 @@ reboot
 ### scp ###
 
 ```
-putty:
-scp -r devops@192.168.10.2:/opt/lampp/ d:/
-
 git bash:
 scp -r C:/Users/wj/Downloads/gerrit-2.15.1.war weijia@192.168.44.132:/home/weijia
-scp -r C:/Users/wj/Downloads/jdk-8u231-linux-x64.rpm weijia@192.168.180.138:/home/weijia
+scp -r root@149.28.209.204:/root/ d:/temp
 ```
 
 ### git config
