@@ -72,6 +72,12 @@ https://bitnami.com/stack/mediawiki/README.txt
 
 <https://www.npmjs.cn/>
 
+[Use Windows Build Tools npm module ](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run)
+
+```
+ npm install --global windows-build-tools --vs2015
+```
+
 ## Git ##
 
 	git -c http.sslVerify=false clone 'url'
