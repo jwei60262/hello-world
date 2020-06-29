@@ -146,6 +146,12 @@ chmod +x /etc/rc.d/rc.local
 reboot
 ```
 
+## Linuxone
+
+```
+ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
+```
+
 ## Ubuntu
 
 ### Ubuntu packages ###
@@ -373,10 +379,6 @@ IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上�
 
 POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
 
-## PKI
-
-SSH HTTPS SSL TSL
-
 ## IPv4 address space ##
 
 [Here's a visualization of the entire IPv4 address space](http://lh3.googleusercontent.com/cFkfL3BjjIW6M4uaoBBaJqrCeyhtvivrJIPunhze7JFmUy5ezsaMEkoF2T1pspYRSYD-gMZzUBwKSf3yI73i=s0)
@@ -397,6 +399,12 @@ Private address netblocks
 	10.0.0.0/8
 	172.16.0.0/12
 	192.168.0.0/16
+
+## Telnet
+
+```
+telnet 47.240.166.195 22 
+```
 
 ## Netcat ##
 
