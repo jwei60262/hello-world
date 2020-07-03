@@ -361,6 +361,7 @@ ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
 git bash:
 scp -r C:/Users/wj/Downloads/gerrit-2.15.1.war weijia@192.168.44.132:/home/weijia
 scp -r root@149.28.209.204:/root/ d:/temp
+scp -r -i ~/.ssh/linuxonekey.pem linux1@148.100.245.68:/home/linux1/fabric-samples/hyperledger-fabric-linux-amd64-1.4.2.tar.gz d:/temp
 ```
 
 ### git config
