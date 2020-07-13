@@ -136,7 +136,26 @@ Existing Git repository
 2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
 3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
 
-## CentOS ##
+## zentao ##
+
+安装 Docker 
+
+https://docs.docker.com/engine/install/centos/
+
+安装 Docker Compose
+
+https://docs.docker.com/compose/install/
+
+查看版本
+
+```
+docker --version
+docker-compose --version
+```
+
+Docker方式部署禅道
+
+https://www.zentao.net/book/zentaopmshelp/405.html
 
 禅道开机启动
 
