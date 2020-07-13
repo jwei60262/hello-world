@@ -157,6 +157,18 @@ Docker方式部署禅道
 
 https://www.zentao.net/book/zentaopmshelp/405.html
 
+创建docker网络驱动
+
+```
+sudo docker network create --subnet=172.172.172.0/24 zentaonet
+```
+
+启动禅道容器
+
+```
+sudo docker run --name zentao -p 80:80 --network=zentaonet --ip 172.172.172.172 --mac-address 02:42:ac:11:00:00 -v /app/zentaopms:/app/zentaopms -v /app/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=jdie34 -d easysoft/zentao:latest
+```
+
 禅道开机启动
 
 ```
