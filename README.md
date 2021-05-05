@@ -476,5 +476,26 @@ printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' |nc example.net 80
 2. Google Play Services
 3. Play Store
 
+## 通信
 
+WiFi 频率
+
+```
+2.4 GHz = 2 400 000 000 Hz
+5 GHz = 5 000 000 000 Hz
+```
+
+5G通信频率
+
+```
+huawei 6000兆赫兹 = 6KMHz = 6GHz = 6 000 000 000 Hz
+Qualcomm 28千兆赫兹 = 28KMHz = 28GHz = 28 000 000 000 Hz
+```
+
+带宽
+
+```
+频谱带宽 20MHz
+数据容量带宽 1000M =  8 * 125M = 125MB
+```
 
