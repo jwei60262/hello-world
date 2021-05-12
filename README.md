@@ -499,3 +499,70 @@ Qualcomm 28千兆赫兹 = 28KMHz = 28GHz = 28 000 000 000 Hz
 数据容量带宽 1000M =  8 * 125M = 125MB
 ```
 
+## Distributed systems
+
+### Two basic tasks
+
+There are two basic tasks that any computer system needs to accomplish:
+
+- storage and
+- computation
+
+### Scalability
+
+[**Scalability**](http://en.wikipedia.org/wiki/Scalability) is the ability of a system, network, or process, to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.
+
+- Size scalability
+- Geographic scalability
+- Administrative scalability
+
+#### Performance (and latency)
+
+is characterized by the amount of useful work accomplished by a computer system compared to the time and resources used.
+
+Depending on the context, this may involve achieving one or more of the following:
+
+- Short response time/low latency for a given piece of work 短时间
+- High throughput (rate of processing work) 高通量
+- Low utilization of computing resource(s) 小资源
+
+##### Latency
+
+The state of being latent; delay, a period between the initiation of something and the occurrence.
+
+For example, imagine that you are infected with an airborne virus that turns people into zombies. The latent period is the time between when you became infected, and when you turn into a zombie. That's latency: the time during which something that has already happened is concealed from view.
+
+#### Availability (and fault tolerance)
+
+the proportion of time a system is in a functioning condition. If a user cannot access the system, it is said to be unavailable.
+
+Formulaically, availability is: `Availability = uptime / (uptime + downtime)`.
+
+For example:
+
+| Availability %         | How much downtime is allowed per year? |
+| ---------------------- | -------------------------------------- |
+| 90% ("one nine")       | More than a month                      |
+| 99% ("two nines")      | Less than 4 days                       |
+| 99.9% ("three nines")  | Less than 9 hours                      |
+| 99.99% ("four nines")  | Less than an hour                      |
+| 99.999% ("five nines") | ~ 5 minutes                            |
+| 99.9999% ("six nines") | ~ 31 seconds                           |
+
+##### Fault tolerance
+
+ability of a system to behave in a well-defined manner once faults occur
+
+### Abstractions and models
+
+- System model (asynchronous / synchronous)
+- Failure model (crash-fail, partitions, Byzantine)
+- Consistency model (strong, eventual)
+
+### Design techniques: partition and replicate
+
+There are two basic techniques that can be applied to a data set. It can be split over multiple nodes (partitioning) to allow for more parallel processing. It can also be copied or cached on different nodes to reduce the distance between the client and the server and for greater fault tolerance (replication).
+
+### Reference
+
+http://book.mixu.net/distsys/intro.html
