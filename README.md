@@ -499,6 +499,22 @@ Qualcomm 28千兆赫兹 = 28KMHz = 28GHz = 28 000 000 000 Hz
 数据容量带宽 1000M =  8 * 125M = 125MB
 ```
 
+## 远程通信
+
+RPC
+
+- TCP
+  - RMI
+- HTTP
+  - gRPC
+  - JSON RPC
+
+CORBA -- TCP
+
+SOAP -- WebService -- HTTP
+
+RESTFUL
+
 ## Distributed systems
 
 ### Two basic tasks
