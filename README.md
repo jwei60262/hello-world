@@ -80,6 +80,10 @@ https://bitnami.com/stack/mediawiki/README.txt
 
 ## Git ##
 
+**快照 Snapshot**: 某一时刻数据的状态
+
+快照流
+
 	git -c http.sslVerify=false clone 'url'
 	
 	git config --system --unset credential.helper
@@ -90,6 +94,20 @@ https://bitnami.com/stack/mediawiki/README.txt
 	git config --global http.sslVerify false  
 	
 	git push -u origin master
+
+https://git-scm.com/book/en/v2
+
+对象：commit，tree，blob
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+引用：refs
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-References
+
+删除敏感信息
+
+https://docs.github.com/cn/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
 
 ### Command line instructions ###
 
