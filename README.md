@@ -8,202 +8,18 @@
 7. 我的文档
 8. /weixin
 9. 桌面文档
-# DOCS #
 
-[![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
+# Install google play
 
-## Docker
+1. Google 服务框架
+2. Google Play Services
+3. Play Store
 
-https://docs.docker.com/install/linux/docker-ce/centos/
-
-https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
-
-**Configure Docker to start on boot**
-
-```
-sudo systemctl enable docker 
-sudo systemctl disable docker
-```
-
-**Start Docker**
-
-```
-sudo systemctl start docker
-sudo systemctl status docker
-```
-
-## DistroWatch ##
-
-[DistroWatch](https://distrowatch.com/)
-
-## GitLab ##
-
-### GitLab ###
-
-[GitLab](https://about.gitlab.com/)
-
-服务器上的 Git - [GitLab](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-GitLab)
-
-GitLab 社区版的 [readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master) 文件
-
-GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
-
-[Maintenance commands](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)
-
-Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
-
-## Bitnami GitLab ##
-
-If no IP address is assigned,try reloading the IP address by executing the command below.
-
-	sudo /etc/init.d/networking force-reload
-
-[Start Or Stop Services](https://docs.bitnami.com/virtual-machine/apps/mediawiki/administration/control-services/)
-
-## CMS ##
-
-## Mediawiki ##
-
-https://bitnami.com/stack/mediawiki/installer
-
-https://bitnami.com/stack/mediawiki/README.txt
-
-## npm 中文文档 ##
-
-<https://www.npmjs.cn/>
-
-[Use Windows Build Tools npm module ](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run)
-
-```
- npm install --global windows-build-tools --vs2015
-```
-
-## Git ##
-
-**快照 Snapshot**: 某一时刻数据的状态
-
-快照流
-
-	git -c http.sslVerify=false clone 'url'
-	
-	git config --system --unset credential.helper
-	
-	git config --global user.name "wei"
-	git config --global user.email "zxll760606@sina.com"
-	
-	git config --global http.sslVerify false  
-	
-	git push -u origin master
-
-https://git-scm.com/book/en/v2
-
-对象：commit，tree，blob
-
-https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
-
-引用：refs
-
-https://git-scm.com/book/en/v2/Git-Internals-Git-References
-
-删除敏感信息
-
-https://docs.github.com/cn/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
-
-### Command line instructions ###
-
-Git global setup
-
-	git config --global user.name "0714weijia"
-	git config --global user.email "zxll760606@sina.com"
-
-Create a new repository
-
-	git clone https://gitlab.com/0714weijia/test.git
-	cd test
-	touch README.md
-	git add README.md
-	git commit -m "add README"
-	git push -u origin master
-
-Existing folder
-
-	cd existing_folder
-	git init
-	git remote add origin https://gitlab.com/0714weijia/test.git
-	git add .
-	git commit -m "Initial commit"
-	git push -u origin master
-
-Existing Git repository
-
-	cd existing_repo
-	git remote rename origin old-origin
-	git remote add origin https://gitlab.com/0714weijia/test.git
-	git push -u origin --all
-	git push -u origin --tags
-
-## SSH key ##
-
-[Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
-
-[Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-
-## Vagrant ##
-
-1. Install VirtualBox . [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)
-2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
-3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
-
-## zentao ##
-
-安装 Docker 
-
-https://docs.docker.com/engine/install/centos/
-
-安装 Docker Compose
-
-https://docs.docker.com/compose/install/
-
-查看版本
-
-```
-docker --version
-docker-compose --version
-```
-
-Docker方式部署禅道
-
-https://www.zentao.net/book/zentaopmshelp/405.html
-
-创建docker网络驱动
-
-```
-sudo docker network create --subnet=172.172.172.0/24 zentaonet
-```
-
-启动禅道容器
-
-```
-sudo docker run --name zentao -p 80:80 --network=zentaonet --ip 172.172.172.172 --mac-address 02:42:ac:11:00:00 -v /app/zentaopms:/app/zentaopms -v /app/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d easysoft/zentao:latest
-```
-
-禅道开机启动
-
-```
-echo '/opt/zbox/zbox restart' >> /etc/rc.local
-chmod +x /etc/rc.d/rc.local
-reboot
-```
-
-## Linuxone
-
-```
-ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
-```
+# Linux
 
 ## Ubuntu
 
-### Ubuntu packages ###
+**Ubuntu packages**
 
 [Ubuntu.com/](https://packages.ubuntu.com/)
 
@@ -347,6 +163,7 @@ ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
   </tr>
 </table>
 
+
 	chmod 641 .ssh/authorized_keys (更改文件权限)
 
 <table>
@@ -372,6 +189,7 @@ ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
   </tr>
 </table>
 
+
 **Ports**
 
 	HTTP 80 HTTPS 443 SSH 22 DNS 53
@@ -394,17 +212,17 @@ ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
 
 ## Linux tools ##
 
-### Webmin ###
+**Webmin**
 
 [webmin](http://www.webmin.com/)
 
 [install-webmin](https://docs.bitnami.com/virtual-machine/faq/configuration/install-webmin/)
 
-### wget ###
+**wget**
 
 	wget http://prdownloads.sourceforge.net/webadmin/webmin_1.900_all.deb
 
-### scp ###
+**scp**
 
 ```
 git bash:
@@ -413,21 +231,19 @@ scp -r root@149.28.209.204:/root/ d:/temp
 scp -r -i ~/.ssh/linuxonekey.pem linux1@148.100.245.68:/home/linux1/fabric-samples/hyperledger-fabric-linux-amd64-1.4.2.tar.gz d:/temp
 ```
 
-### git config
+**git config**
 
 ```
 git config --file $GERRIT_SITE/etc/gerrit.config httpd.listenUrl 'http://localhost:8080'
 ```
 
-## SMTP
+**Command-line completion**
 
-发送电子邮件的协议：SMTP
+```
+https://docs.docker.com/compose/completion/
+```
 
-接收电子邮件的协议：IMAP、POP
-
-IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上，消息可以在多个设备上同步和访问。
-
-POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
+# Net
 
 ## IPv4 address space ##
 
@@ -488,12 +304,6 @@ sudo tcpdump -n port 80
 printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' |nc example.net 80
 ```
 
-## Install google play
-
-1. Google 服务框架
-2. Google Play Services
-3. Play Store
-
 ## 通信
 
 WiFi 频率
@@ -517,32 +327,91 @@ Qualcomm 28千兆赫兹 = 28KMHz = 28GHz = 28 000 000 000 Hz
 数据容量带宽 1000M =  8 * 125M = 125MB
 ```
 
-## 远程通信
+# Cloud
 
-RPC
+## 关键技术
 
-- TCP
-  - RMI
-- HTTP
-  - gRPC
-  - JSON RPC
+**虚拟化**
 
-CORBA -- TCP
+- 发展
+  - 大型机虚拟化
+  - X86虚拟化
+- 分类
+  - 按对象
+    - 操作系统虚拟化：将操作系统及系统调用抽象为资源
+    - 平台虚拟化：将硬件组件抽象为逻辑资源
+  - 按方案
+    - 软件虚拟化：截获或模拟物理平台访问
+    - 硬件虚拟化：硬件本身提供截获和重定向支持
+  - 按方式
+    - 全虚拟化
+    - 准虚拟化
+-  虚拟机监控器：核心的执行和管理层
+  - 名称
+    - Hypervisor或
+    - VMM(Virtual Machine Monitor)
+  - 作用
+    - 管理虚拟机生命周期，创建、启动、关闭、销毁
+    - 为虚拟机抽象出硬件环境，与硬件打交道
+  - 类型
+    - 运行在硬件上
+      - VMM
+      - ESX
+      - HyperV
+      - Xen
+    - 运行在操作系统上
+      - VMware
+      - VirtualBox
 
-SOAP -- WebService -- HTTP
+**开源虚拟化方案**
 
-RESTFUL
+- KVM
+  - 虚拟机，也叫Guest、客户机
+  - 表现为进程
+  - 保存为文件
+    - 配置文件
+    - 虚拟磁盘文件：镜像
+- Xen
 
-## Distributed systems
+**弹性计算**
 
-### Two basic tasks
+## 虚拟化技术
+
+将物理资源抽象为逻辑单元
+
+- 服务器虚拟化
+  - CPU
+  - 内存
+- 存储虚拟化
+  - 固态硬盘
+  - 机械硬盘
+- 网络虚拟化
+  - 虚拟网卡
+  - 虚拟交换机
+  - 网络IP地址
+    - 隔离，多租户
+    - 转换，访问外网
+- GPU虚拟化
+
+## 云服务名称
+
+运行在Iaas层的服务
+
+- 实例
+- 虚拟机
+- 含计算服务的名称
+- 含弹性计算的名称
+
+# Distributed systems
+
+## Two basic tasks
 
 There are two basic tasks that any computer system needs to accomplish:
 
-- storage and
+- storage
 - computation
 
-### Scalability
+## Scalability
 
 [**Scalability**](http://en.wikipedia.org/wiki/Scalability) is the ability of a system, network, or process, to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.
 
@@ -550,7 +419,7 @@ There are two basic tasks that any computer system needs to accomplish:
 - Geographic scalability
 - Administrative scalability
 
-#### Performance (and latency)
+### Performance (and latency)
 
 is characterized by the amount of useful work accomplished by a computer system compared to the time and resources used.
 
@@ -560,13 +429,13 @@ Depending on the context, this may involve achieving one or more of the followin
 - High throughput (rate of processing work) 高通量
 - Low utilization of computing resource(s) 小资源
 
-##### Latency
+**Latency**
 
 The state of being latent; delay, a period between the initiation of something and the occurrence.
 
 For example, imagine that you are infected with an airborne virus that turns people into zombies. The latent period is the time between when you became infected, and when you turn into a zombie. That's latency: the time during which something that has already happened is concealed from view.
 
-#### Availability (and fault tolerance)
+### Availability (and fault tolerance)
 
 the proportion of time a system is in a functioning condition. If a user cannot access the system, it is said to be unavailable.
 
@@ -583,20 +452,239 @@ For example:
 | 99.999% ("five nines") | ~ 5 minutes                            |
 | 99.9999% ("six nines") | ~ 31 seconds                           |
 
-##### Fault tolerance
+**Fault tolerance**
 
 ability of a system to behave in a well-defined manner once faults occur
 
-### Abstractions and models
+## Abstractions and models
 
 - System model (asynchronous / synchronous)
 - Failure model (crash-fail, partitions, Byzantine)
 - Consistency model (strong, eventual)
 
-### Design techniques: partition and replicate
+## Design techniques: partition and replicate
 
 There are two basic techniques that can be applied to a data set. It can be split over multiple nodes (partitioning) to allow for more parallel processing. It can also be copied or cached on different nodes to reduce the distance between the client and the server and for greater fault tolerance (replication).
 
-### Reference
+## Reference
 
 http://book.mixu.net/distsys/intro.html
+
+# DOCS #
+
+[![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
+
+## Docker
+
+https://docs.docker.com/install/linux/docker-ce/centos/
+
+https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
+
+**Configure Docker to start on boot**
+
+```
+sudo systemctl enable docker 
+sudo systemctl disable docker
+```
+
+**Start Docker**
+
+```
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+## DistroWatch ##
+
+[DistroWatch](https://distrowatch.com/)
+
+## GitLab ##
+
+[GitLab](https://about.gitlab.com/)
+
+服务器上的 Git - [GitLab](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-GitLab)
+
+GitLab 社区版的 [readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master) 文件
+
+GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
+
+[Maintenance commands](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)
+
+Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
+
+## Bitnami GitLab ##
+
+If no IP address is assigned,try reloading the IP address by executing the command below.
+
+	sudo /etc/init.d/networking force-reload
+
+[Start Or Stop Services](https://docs.bitnami.com/virtual-machine/apps/mediawiki/administration/control-services/)
+
+## CMS ##
+
+## Mediawiki ##
+
+https://bitnami.com/stack/mediawiki/installer
+
+https://bitnami.com/stack/mediawiki/README.txt
+
+## npm 中文文档 ##
+
+<https://www.npmjs.cn/>
+
+[Use Windows Build Tools npm module ](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run)
+
+```
+ npm install --global windows-build-tools --vs2015
+```
+
+## Git ##
+
+**快照 **
+
+Snapshot: 某一时刻数据的状态
+
+快照流
+
+**book**
+
+https://git-scm.com/book/en/v2
+
+**对象**：commit，tree，blob
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+**引用**：refs
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-References
+
+**删除敏感信息**
+
+https://docs.github.com/cn/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+
+### Command line instructions ###
+
+Git global setup
+
+	git -c http.sslVerify=false clone 'url'
+	
+	git config --system --unset credential.helper
+	git config --global http.sslVerify false  
+	
+	git push -u origin master
+	
+	git config --global user.name "0714weijia"
+	git config --global user.email "zxll760606@sina.com"
+
+Create a new repository
+
+	git clone https://gitlab.com/0714weijia/test.git
+	cd test
+	touch README.md
+	git add README.md
+	git commit -m "add README"
+	git push -u origin master
+
+Existing folder
+
+	cd existing_folder
+	git init
+	git remote add origin https://gitlab.com/0714weijia/test.git
+	git add .
+	git commit -m "Initial commit"
+	git push -u origin master
+
+Existing Git repository
+
+	cd existing_repo
+	git remote rename origin old-origin
+	git remote add origin https://gitlab.com/0714weijia/test.git
+	git push -u origin --all
+	git push -u origin --tags
+
+## Github ##
+
+**SSH key**
+
+[Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
+
+[Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+## Vagrant ##
+
+1. Install VirtualBox . [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)
+2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
+3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
+
+## zentao ##
+
+安装 Docker 
+
+https://docs.docker.com/engine/install/centos/
+
+安装 Docker Compose
+
+https://docs.docker.com/compose/install/
+
+查看版本
+
+```
+docker --version
+docker-compose --version
+```
+
+Docker方式部署禅道
+
+https://www.zentao.net/book/zentaopmshelp/405.html
+
+创建docker网络驱动
+
+```
+sudo docker network create --subnet=172.172.172.0/24 zentaonet
+```
+
+启动禅道容器
+
+```
+sudo docker run --name zentao -p 80:80 --network=zentaonet --ip 172.172.172.172 --mac-address 02:42:ac:11:00:00 -v /app/zentaopms:/app/zentaopms -v /app/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d easysoft/zentao:latest
+```
+
+禅道开机启动
+
+```
+echo '/opt/zbox/zbox restart' >> /etc/rc.local
+chmod +x /etc/rc.d/rc.local
+reboot
+```
+
+## Linuxone
+
+```
+ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
+```
+
+## SMTP
+
+发送电子邮件的协议：SMTP
+
+接收电子邮件的协议：IMAP、POP
+
+IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上，消息可以在多个设备上同步和访问。
+
+POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
+
+## 远程通信
+
+RPC
+
+- TCP
+  - RMI
+- HTTP
+  - gRPC
+  - JSON RPC
+
+CORBA -- TCP
+
+SOAP -- WebService -- HTTP
+
+RESTFUL
