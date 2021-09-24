@@ -8,6 +8,9 @@
 7. 我的文档
 8. /weixin
 9. 桌面文档
+10. C:\Users\wj\AppData\Roaming\Typora\typora-user-images\
+11. resilio
+12. BaiduNetdiskDownload
 
 # Install google play
 
