@@ -93,6 +93,7 @@
 	pwd
 	cd /
 	cd ..
+	cd $HOME/.profile == cd ~/.profile
 	
 	mdkir
 	mv
@@ -246,9 +247,47 @@ git config --file $GERRIT_SITE/etc/gerrit.config httpd.listenUrl 'http://localho
 https://docs.docker.com/compose/completion/
 ```
 
-# Net
+# Network
 
-## IPv4 address space ##
+## TCP/IP
+
+### Message
+
+- HTTP -- Data
+- TCP -- Segment
+- UDP -- Datagram
+- IP -- Pack
+
+### FTP
+
+**Server**
+
+SERVER-U
+
+**Client**
+
+CuteFTP
+
+FlashFXP
+
+FTP Explorer
+
+### IP
+
+**分组交换技术**
+
+- IP数据报：IP报文分组
+- IP虚电路：IP报文分组
+
+**信元交换技术**
+
+- ATM：53字节的信元，核心路由器将IP报文切换为信元
+  - 虚通路
+  - 虚通道
+- MPLS：ATM IP交换和标记交换
+- MPLS-VPN
+
+### IPv4 address space ###
 
 [Here's a visualization of the entire IPv4 address space](http://lh3.googleusercontent.com/cFkfL3BjjIW6M4uaoBBaJqrCeyhtvivrJIPunhze7JFmUy5ezsaMEkoF2T1pspYRSYD-gMZzUBwKSf3yI73i=s0)
 
@@ -268,6 +307,10 @@ Private address netblocks
 	10.0.0.0/8
 	172.16.0.0/12
 	192.168.0.0/16
+
+## Ubuntu
+
+https://ubuntu.com/server/docs/network-configuration
 
 ## Telnet
 
@@ -327,7 +370,7 @@ Qualcomm 28千兆赫兹 = 28KMHz = 28GHz = 28 000 000 000 Hz
 
 ```
 频谱带宽 20MHz
-数据容量带宽 1000M =  8 * 125M = 125MB
+数据容量带宽 1000Mb =  8 * 125M = 125MB
 ```
 
 # Cloud
@@ -542,6 +585,10 @@ https://bitnami.com/stack/mediawiki/README.txt
 ```
 
 ## Git ##
+
+**Git SCM**
+
+Source code management
 
 **快照 **
 
