@@ -656,6 +656,13 @@ Existing Git repository
 	git push -u origin --all
 	git push -u origin --tags
 
+Status
+
+```
+git status --ignored
+git add -f <pathspec>
+```
+
 ## Github ##
 
 **SSH key**
