@@ -15,6 +15,16 @@
 
 # Install google play
 
+方法一：
+
+“谷歌服务下载器”App
+
+方法二：
+
+https://www.apkmirror.com/
+
+方法三：
+
 1. Google 服务框架
 2. Google Play Services
 3. Play Store
