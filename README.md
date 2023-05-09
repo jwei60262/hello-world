@@ -13,7 +13,9 @@
 12. resilio
 13. BaiduNetdiskDownload
 
-# Install google play
+# Tools
+
+## Install google play
 
 方法一：
 
@@ -28,6 +30,16 @@ https://www.apkmirror.com/
 1. Google 服务框架
 2. Google Play Services
 3. Play Store
+
+## Axure RP Key
+
+Axure rp 9.0.0.3727
+
+Licensee:
+Freecrackdownload.com
+
+Key:
+5vYpJgQZ431X/G5kp6jpOO8Vi3TySCBnAslTcNcKkszfPH7jaM4eKM8CrALBcEC1
 
 # Linux
 
