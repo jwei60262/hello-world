@@ -567,26 +567,6 @@ https://www.zhihu.com/question/304577684
 
 [![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
 
-## Docker
-
-https://docs.docker.com/install/linux/docker-ce/centos/
-
-https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
-
-**Configure Docker to start on boot**
-
-```
-sudo systemctl enable docker 
-sudo systemctl disable docker
-```
-
-**Start Docker**
-
-```
-sudo systemctl start docker
-sudo systemctl status docker
-```
-
 ## DistroWatch ##
 
 [DistroWatch](https://distrowatch.com/)
@@ -594,6 +574,10 @@ sudo systemctl status docker
 ## GitLab ##
 
 [GitLab](https://about.gitlab.com/)
+
+安装 https://gitlab.cn/install/
+
+docker 安装 https://docs.gitlab.com/ee/install/docker.html
 
 服务器上的 Git - [GitLab](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-GitLab)
 
@@ -605,7 +589,7 @@ GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
 
 Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
 
-## Bitnami GitLab ##
+**Bitnami GitLab**
 
 If no IP address is assigned,try reloading the IP address by executing the command below.
 
@@ -792,3 +776,309 @@ CORBA -- TCP
 SOAP -- WebService -- HTTP
 
 RESTFUL
+
+# Docker
+
+## Docker
+
+**Manage Docker as a non-root user**
+
+https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
+
+如果希望 docker daemon 在系统启动的时候会自动启动的话，使用下边的命令
+
+```
+sudo systemctl enable docker
+```
+
+将你的用户添加到 docker 组
+
+```
+sudo usermod -a -G docker <username>
+or
+sudo usermod -aG docker $USER
+```
+
+**Configure Docker to start on boot**
+
+```
+sudo systemctl enable docker 
+sudo systemctl disable docker
+```
+
+**Start Docker**
+
+```
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+**Install Docker Engine on CentOS**
+
+https://docs.docker.com/install/linux/docker-ce/centos/
+
+**Install using the repository on Ubuntu**
+
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+**Install from a package  on Ubuntu**
+
+https://docs.docker.com/engine/install/ubuntu/#install-from-a-package
+
+**docker command**
+
+```
+docker images
+docker logs peer0.org1.example.com
+```
+
+## Docker-Compose
+
+**Install Compose on Linux systems**
+
+安装docker-compose而非docker-compose-plugin最新版本
+
+```
+ sudo apt-get update
+ sudo apt-get install docker-compose
+```
+
+或者参考下面的安装文档
+
+https://docs.docker.com/compose/install/#install-compose
+
+Apply executable permissions to the binary
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+查看是否安装成功
+
+```
+docker-compose --version
+```
+
+## 问题
+
+**问题描述：**
+
+docker-compose segment fault
+
+**解决方法：**
+
+如果调用docker-compose的时候有segment fault错误，用sudo apt-get purge docker-compose卸载一下，同时清理/usr/local/bin 下面的docker-compose，然后重新安装sudo apt-get install docker-compose。
+
+**问题描述：**
+
+dial unix /var/run/docker.sock: connect: permission denied
+
+**解决方法：**
+
+https://stackoverflow.com/questions/51342810/how-to-fix-dial-unix-var-run-docker-sock-connect-permission-denied-when-gro
+
+```
+ls -last /var/run/docker.sock
+cat /etc/group
+cat /etc/group | grep docker
+
+whoami //查看当前用户
+echo $USER //打印当前用户
+groups //查看所有群组
+groups $USER //查看当前用户所在群组
+
+sudo usermod -aG docker $USER //当前用户加入docker群组
+sudo reboot //重启系统
+```
+
+# zentao
+
+## 安装 Docker
+
+https://docs.docker.com/engine/install/centos/
+
+## 安装 Docker Compose
+
+https://docs.docker.com/compose/install/
+
+## 查看版本
+
+```
+docker --version
+docker-compose --version
+```
+
+## Docker方式部署禅道
+
+https://www.zentao.net/book/zentaopmshelp/405.html
+
+## 创建docker网络驱动
+
+```
+sudo docker network create --subnet=172.172.172.0/24 zentaonet
+```
+
+## 启动禅道容器
+
+示例1
+
+```
+sudo docker run --name zentao -p 80:80 --network=zentaonet --ip 172.172.172.172 --mac-address 02:42:ac:11:00:00 -v /app/zentaopms:/app/zentaopms -v /app/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=jdie34 -d easysoft/zentao:latest
+```
+
+示例2
+
+```
+sudo docker run --name zentaossl -p 443:443 --network=zentaonet --ip 172.172.172.173 --mac-address 02:42:ac:11:00:03 -v /zentaoapp/zentaopms:/app/zentaopms -v /zentaoapp/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=jdie34 -d easysoft/zentao:latest
+```
+
+## 访问容器
+
+```
+docker exec -it zentao /bin/bash
+```
+
+## mysql配置
+
+配置信息已经成功保存到 */app/zentaopms/config/my.php* 中。可继续修改此文件。
+
+```
+<?php
+$config->installed       = true;
+$config->debug           = false;
+$config->requestType     = 'PATH_INFO';
+$config->timezone        = 'Asia/Shanghai';
+$config->db->host        = '127.0.0.1';
+$config->db->port        = '3306';
+$config->db->name        = 'zentao';
+$config->db->user        = 'root';
+$config->db->encoding    = 'UTF8';
+$config->db->password    = 'jdie34';
+$config->db->prefix      = 'zt_';
+$config->webRoot         = getWebRoot();
+$config->default->lang   = 'zh-cn';
+```
+
+## Linux一键安装开机启动
+
+```
+echo '/opt/zbox/zbox restart' >> /etc/rc.local
+chmod +x /etc/rc.d/rc.local
+reboot
+```
+
+## 禅道使用方法
+
+https://www.zentao.net/book/zentaopmshelp/40.html
+
+## HTTPS
+
+**一、新建 docker 容器，映射 443 端口**
+
+**二、获取证书文件 *.pem，*.key**
+
+将证书文件保存到 docker volume 指定的 host 主机目录中，例如 /zentaoapp/zentaopms/ssl
+
+**三、启用 ssl**
+
+```
+docker exec -it zentaossl /bin/bash
+apt upgrade apache2
+a2enmod ssl
+a2ensite default-ssl
+```
+
+详情阅读 https://ubuntu.com/server/docs/web-servers-apache
+
+**四、修改 ssl 配置文件**
+
+ssl 配置文件路径：
+
+```
+/etc/apache2/sites-available/default-ssl
+```
+
+配置证书路径：
+
+```
+/app/zentaopms/ssl/certs/projects.xdlianrong.com.pem
+/app/zentaopms/ssl/private/projects.xdlianrong.com.key
+```
+
+配置 DocumentRoot：
+
+```
+DocumentRoot /app/zentaopms/www
+```
+
+配置 Directory
+
+```
+<Directory />
+    SSLOptions +StdEnvVars
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+
+重启 apache2 服务
+
+```
+service apache2 reload
+```
+
+参考：
+
+- http://httpd.apache.org/docs/2.4/ssl/
+- http://httpd.apache.org/docs/2.4/ssl/ssl_howto.html
+- https://ubuntu.com/server/docs/web-servers-apache
+
+## Nginx 反向代理实现 HTTPS
+
+使用nginx配置反向代理,并且在nginx上配置证书即可.以下是详细步骤:
+
+1. 使用[阿里云配置证书](https://common-buy.aliyun.com/?spm=5176.2020520163.0.0.89b656a7ufvvod&commodityCode=cas)(可以选择OV免费版,按照提示操作即可)
+
+2. 在服务器上配置nginx:
+
+   ```
+   vim /etc/nginx/nginx.conf
+   ```
+
+   然后在打开的页面中找到server {}项,在里面配置:
+
+   ```
+   listen       443 ssl http2 default_server;
+   #listen       [::]:443 ssl http2 default_server; //ipv6,可以不配置
+   server_name  证书对应的域名;
+   root         /usr/share/nginx/html;//此处无需改动
+   ssl_certificate pem格式文件所在的目录;
+   ssl_certificate_key key格式文件所在的目录;
+   ssl_session_cache shared:SSL:1m;
+   ssl_session_timeout  10m;//超时时间
+   ssl_ciphers HIGH:!aNULL:!MD5;//加密组件,如有更安全或者更新的也可以使用
+   ssl_prefer_server_ciphers on;
+   ```
+
+3. 启动nginx即可
+
+```
+nginx
+```
+
+## 数据备份
+
+及时备份数据。
+
+## 故障排除
+
+**禅道容器启动失败**
+
+首先考虑存储空间的问题(区块链节点会占用大量存储空间)
+
+1. 使用docker logs name查看对应容器的日志，name为容器名称
+
+2. 如出现 `/etc/init.d/mysql: ERROR: The partition with /var/lib/mysql is too full!`则为存储空间不足，需要使用 `df -h `命令查看存储空间剩余，使用 `du -sh`查看当前目录下的空间占用
+
+   
