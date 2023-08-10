@@ -41,6 +41,10 @@ Freecrackdownload.com
 Key:
 5vYpJgQZ431X/G5kp6jpOO8Vi3TySCBnAslTcNcKkszfPH7jaM4eKM8CrALBcEC1
 
+## OBS Studio
+
+录屏
+
 # Linux
 
 ## Ubuntu
