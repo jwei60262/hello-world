@@ -895,6 +895,22 @@ sudo usermod -aG docker $USER //当前用户加入docker群组
 sudo reboot //重启系统
 ```
 
+# 开发版本
+
+## standalone 
+
+代码发布打包的时候，有很多种方式，其中一种方式在打包的时候可以将整个项目中所用到的依赖包全部一起打包。一般叫做`Standalone Application`.j即可独立运行的应用。
+
+这种打包方式的优点是显而易见的，即打包之后一个Jar即可运行。迁移快，成本低。相反的，其缺点是如果依赖包升级，则需要重新发布打包。所以这种方式适用于小项目，依赖包少的项目。
+
+## Java version
+
+https://www.baeldung.com/oracle-jdk-vs-openjdk
+
+## JEE version
+
+https://www.baeldung.com/java-enterprise-evolution
+
 # zentao
 
 ## 安装 Docker
@@ -1084,5 +1100,3 @@ nginx
 1. 使用docker logs name查看对应容器的日志，name为容器名称
 
 2. 如出现 `/etc/init.d/mysql: ERROR: The partition with /var/lib/mysql is too full!`则为存储空间不足，需要使用 `df -h `命令查看存储空间剩余，使用 `du -sh`查看当前目录下的空间占用
-
-   
