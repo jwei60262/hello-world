@@ -132,6 +132,11 @@ Key:
 	echo $PATH
 	
 	sudo find / -iname LocalSettings.php -print
+	
+	ps aux
+	ps -elf
+	top
+	pstree -aup
 
 **安装finger,查看用户信息**
 
@@ -916,6 +921,12 @@ https://www.baeldung.com/java-enterprise-evolution
 ## 安装 Docker
 
 https://docs.docker.com/engine/install/centos/
+
+使用容器生成镜像
+
+```
+docker commit os_name image_name:version
+```
 
 ## 安装 Docker Compose
 
