@@ -788,6 +788,25 @@ RESTFUL
 
 # Docker
 
+## CLI
+
+```
+# 停止所有的容器
+docker stop `docker ps -q`
+docker stop `docker ps -a | grep Up | awk '{print $1}'`
+
+# 打印停止的容器ID
+docker ps -a | grep Exit | awk '{print $1}'
+# 删除停止的容器
+docker rm `docker ps -a | grep Exit | awk '{print $1}'`
+docker rm (docker ps -q -f status=exited)
+# 强制删除所有容器
+docker rm -f `docker ps -aq`
+docker container prune
+docker container prune --force --filter "until=5m"
+docker container prune --force --filter "until=2017-01-04T13:10:00"
+```
+
 ## Docker
 
 **Manage Docker as a non-root user**
