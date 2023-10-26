@@ -3,15 +3,16 @@
 2. ss
 3. chrome logout
 4. chrome clean syn item
-5. local git file
-6. /download
-7. 我的文档
-8. /weixin
-9. QQ
-10. 桌面文档
-11. C:\Users\wj\AppData\Roaming\Typora\typora-user-images\
-12. resilio
-13. BaiduNetdiskDownload
+5. chrome 自动填充、密码管理
+6. local git file
+7. /download
+8. 我的文档
+9. /weixin
+10. QQ
+11. 桌面文档
+12. C:\Users\wj\AppData\Roaming\Typora\typora-user-images\
+13. resilio
+14. BaiduNetdiskDownload
 
 # Tools
 
@@ -78,6 +79,8 @@ Key:
 	bean.png bear.png (A single question mark matches any one character.)
 	
 	history
+	
+	yum install -y man man-pages
 	man ls
 	man cowsay
 	apropos
@@ -799,7 +802,7 @@ docker stop `docker ps -a | grep Up | awk '{print $1}'`
 docker ps -a | grep Exit | awk '{print $1}'
 # 删除停止的容器
 docker rm `docker ps -a | grep Exit | awk '{print $1}'`
-docker rm (docker ps -q -f status=exited)
+docker rm `docker ps -q -f status=exited`
 # 强制删除所有容器
 docker rm -f `docker ps -aq`
 docker container prune
