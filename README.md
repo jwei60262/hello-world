@@ -46,6 +46,22 @@ Key:
 
 录屏
 
+# 设计原则
+
+- 多考虑一个量级
+- 面向抽象，依赖倒置
+- 设计模式 == 词牌：菩萨蛮、满江红
+- 复用组件，对抗冗余
+- 模仿 spring boot 的做法，工具替代手工
+- 差异化就是大同小异
+- 可扩展性多使用多态
+
+# 开源
+
+**哪种协议**
+
+看软件作者的诉求， Apache v2/BSD/MIT/GPL/LGPL等都是常见的选择。一般来说，商业友好的License是Apache V2；学术界用的比较多的是BSD和MIT， 硬件或者内核相关用的是GPL和LGPL。
+
 # Linux
 
 ## Ubuntu
@@ -559,17 +575,9 @@ http://book.mixu.net/distsys/intro.html
 
 ## JIT
 
-Just In Time Compiler，一般翻译为即时编译器，这是是针对解释型语言而言的，而且并非虚拟机必须，是一种优化手段，Java的商用虚拟机HotSpot就有这种技术手段，Java虚拟机标准对JIT的存在没有作出任何规范，所以这是虚拟机实现的自定义优化技术。
+JIT(Just In Time Compiler)
 
-HotSpot虚拟机的执行引擎在执行Java代码是可以采用【解释执行】和【编译执行】两种方式的，如果采用的是编译执行方式，那么就会使用到JIT，而解释执行就不会使用到JIT，所以，早期说Java是解释型语言，是没有任何问题的，而在拥有JIT的Java虚拟机环境下，说Java是解释型语言严格意义上已经不正确了。
-
-HotSpot中的编译器是javac，他的工作是将源代码编译成字节码，这部分工作是完全独立的，完全不需要运行时参与，所以Java程序的编译是半独立的实现。有了字节码，就有解释器来进行解释执行，这是早期虚拟机的工作流程，后来，虚拟机会将执行频率高的方法或语句块通过JIT编译成本地机器码，提高了代码执行的效率，至此你已经了解了JIT在Java虚拟机中所处的地位和工作的主要内容。
-
-当JIT编译启用时（默认是启用的），JVM读入.class文件解释后，将其发给JIT编译器。JIT编译器将字节码编译成本机机器代码。 
-
-通常javac将程序源码编译，转换成java字节码，JVM通过解释字节码将其翻译成相应的机器指令，逐条读入，逐条解释翻译。非常显然，经过解释运行，其运行速度必定会比可运行的二进制字节码程序慢。为了提高运行速度，引入了JIT技术。 
-
-在执行时JIT会把翻译过的机器码保存起来，已备下次使用，因此从理论上来说，採用该JIT技术能够，能够接近曾经纯编译技术。   
+HotSpot
 
 ## WebAssembly
 
@@ -617,7 +625,7 @@ https://bitnami.com/stack/mediawiki/installer
 
 https://bitnami.com/stack/mediawiki/README.txt
 
-## npm 中文文档 ##
+## npm ##
 
 <https://www.npmjs.cn/>
 
@@ -773,7 +781,7 @@ IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上�
 
 POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
 
-## 远程通信
+## Remote API
 
 RPC
 
@@ -788,6 +796,10 @@ CORBA -- TCP
 SOAP -- WebService -- HTTP
 
 RESTFUL
+
+## Gradle
+
+https://scans.gradle.com/
 
 # Docker
 
@@ -922,7 +934,7 @@ sudo usermod -aG docker $USER //当前用户加入docker群组
 sudo reboot //重启系统
 ```
 
-# 开发版本
+# 软件版本
 
 ## standalone 
 
