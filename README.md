@@ -82,11 +82,43 @@ Key:
 
 https://cloud.tencent.com/developer/article/1937815
 
+## 全文检索
+
+### Elasticsearch
+
+### Lucene
+
+Apache Lucene set the standard for search and indexing performance. Lucene is the search core of both Apache Solr™ and Elasticsearch™.
+
+https://lucene.apache.org/
+
 # 开源
 
 **哪种协议**
 
 看软件作者的诉求， Apache v2/BSD/MIT/GPL/LGPL等都是常见的选择。一般来说，商业友好的License是Apache V2；学术界用的比较多的是BSD和MIT， 硬件或者内核相关用的是GPL和LGPL。
+
+# 架构
+
+## Message
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/messaging.html
+
+- JMS
+  - ActiveMQ 
+- AMPQ
+  - RabbitMQ
+- Apache Kafka
+- Apache Pulsar
+- RSocket
+
+## JNDI
+
+- JNDI https://docs.oracle.com/javase/jndi/tutorial/getStarted/overview/index.html
+- LDAP
+- DNS
+- RMI
+- CORBA
 
 # Linux
 
