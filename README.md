@@ -14,6 +14,22 @@
 13. resilio
 14. BaiduNetdiskDownload
 
+# 技术书
+
+《 Designing Data-Intensive Applications》
+
+《数据密集型应用系统设计》
+
+https://www.zhihu.com/tardis/zm/art/421245296?source_id=1005
+
+https://github.com/Vonng/ddia
+
+https://vonng.gitbooks.io/ddia-cn/content/
+
+------
+
+《微服务架构设计模式》
+
 # Tools
 
 ## Install google play
