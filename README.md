@@ -1,6 +1,5 @@
 # Desktop clean
 1. .ssh
-2. ss
 3. chrome logout
 4. chrome clean syn item
 5. chrome 自动填充、密码管理
@@ -11,6 +10,7 @@
 10. QQ
 11. 桌面文档
 12. C:\Users\wj\AppData\Roaming\Typora\typora-user-images\
+12. ss
 13. resilio
 14. BaiduNetdiskDownload
 
