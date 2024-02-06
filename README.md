@@ -326,6 +326,21 @@ https://docs.docker.com/compose/completion/
 
 # Network
 
+## WebSocket
+
+**STOMP**
+
+https://docs.spring.io/spring-framework/reference/web/websocket.html
+
+https://docs.spring.io/spring-framework/reference/web/websocket/stomp.html
+
+**SockJS**
+
+- websocket
+- Polling (轮询)
+- Long-Polling (长轮询)
+- xhr-streaming(串流)
+
 ## TCP/IP
 
 ### Message
