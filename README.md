@@ -1,4 +1,23 @@
+# 手续
+
+- 代码
+- 文档
+- 账号
+  - 周报
+- 服务器
+  - github
+  - gitlab
+  - 云服务
+    - 阿里云
+    - 腾讯云
+  - 虚拟机
+  - 企业邮箱
+  - 短信服务
+  - 域名
+  - 其它
+
 # Desktop clean
+
 1. .ssh
 3. chrome logout
 4. chrome clean syn item
@@ -74,6 +93,20 @@ Key:
 
 # 数据库
 
+## 数据库
+
+- 文档数据库
+  - lotus domino -- notes storage facillity
+  - mongodb couchbase
+- 键值存储
+  - couchbase
+  - memcached
+  - infinispan
+  - gemfire
+- 图像数据库
+  - neo4j
+  - apache giraph
+
 ## 分表分库
 
 ## 主从复制，读写分离
@@ -85,6 +118,8 @@ https://cloud.tencent.com/developer/article/1937815
 ## 全文检索
 
 ### Elasticsearch
+
+### Apache Solr
 
 ### Lucene
 
@@ -119,6 +154,22 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/messaging.html
 - DNS
 - RMI
 - CORBA
+
+## Remote API
+
+RPC
+
+- TCP
+  - RMI
+- HTTP
+  - gRPC
+  - JSON RPC
+
+CORBA -- TCP
+
+SOAP -- WebService -- HTTP
+
+RESTFUL
 
 # Linux
 
@@ -535,7 +586,7 @@ Qualcomm 28千兆赫兹 = 28KMHz = 28GHz = 28 000 000 000 Hz
       - Xen
     - 运行在操作系统上
       - VMware
-      - VirtualBox
+      - [Oracle VM VirtualBox](https://www.virtualbox.org/)
 
 **开源虚拟化方案**
 
@@ -644,7 +695,11 @@ There are two basic techniques that can be applied to a data set. It can be spli
 
 http://book.mixu.net/distsys/intro.html
 
-# 编程语言
+# Java
+
+https://docs.oracle.com/en/java/javase/14/
+
+https://docs.oracle.com/javase/tutorial/
 
 ## JIT
 
@@ -652,9 +707,23 @@ JIT(Just In Time Compiler)
 
 HotSpot
 
-## WebAssembly
+## Secure
 
-https://www.zhihu.com/question/304577684
+[Secure Coding Guidelines for Java SE (oracle.com)](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+
+[Security Developer’s Guide](https://docs.oracle.com/en/java/javase/14/security/index.html)
+
+[Java Secure Socket Extension (JSSE)](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html)
+
+[Java SE Security](https://www.oracle.com/java/technologies/javase/javase-tech-security.html)
+
+[JSON Web Token (jwt)](https://jwt.io/introduction/)
+
+## network
+
+http://openjdk.java.net/groups/net/httpclient/
+
+https://docs.oracle.com/javase/tutorial/networking/index.html
 
 # DOCS #
 
@@ -736,7 +805,7 @@ https://git-scm.com/book/en/v2/Git-Internals-Git-References
 
 https://docs.github.com/cn/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
 
-### Command line instructions ###
+**Command line instructions**
 
 Git global setup
 
@@ -797,46 +866,26 @@ git add -f <pathspec>
 2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
 3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
 
-## zentao ##
+## OpenSSL
 
-安装 Docker 
+[OpenSSL Cookbook](https://www.feistyduck.com/library/openssl-cookbook/)
 
-https://docs.docker.com/engine/install/centos/
+## KeyStore
 
-安装 Docker Compose
+JKS
 
-https://docs.docker.com/compose/install/
+- [Java KeyStore](https://en.wikipedia.org/wiki/Java_KeyStore)
+- [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html)
 
-查看版本
+## doc ##
 
-```
-docker --version
-docker-compose --version
-```
-
-Docker方式部署禅道
-
-https://www.zentao.net/book/zentaopmshelp/405.html
-
-创建docker网络驱动
-
-```
-sudo docker network create --subnet=172.172.172.0/24 zentaonet
-```
-
-启动禅道容器
-
-```
-sudo docker run --name zentao -p 80:80 --network=zentaonet --ip 172.172.172.172 --mac-address 02:42:ac:11:00:00 -v /app/zentaopms:/app/zentaopms -v /app/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d easysoft/zentao:latest
-```
-
-禅道开机启动
-
-```
-echo '/opt/zbox/zbox restart' >> /etc/rc.local
-chmod +x /etc/rc.d/rc.local
-reboot
-```
+- JebBrains -- Writerside
+- Markdown
+  - 下载：[MarkdownPad](http://markdownpad.com/) is a full-featured Markdown editor for Windows.
+  - [Markdown 中文文档](https://markdown-zh.readthedocs.io/en/latest/)
+  - [Markdown 教程](https://www.runoob.com/markdown/md-tutorial.html)
+- Typora
+  - [Typora](https://typora.io/) — a markdown editor, markdown reader.
 
 ## Linuxone
 
@@ -854,21 +903,9 @@ IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上�
 
 POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
 
-## Remote API
+## WebAssembly
 
-RPC
-
-- TCP
-  - RMI
-- HTTP
-  - gRPC
-  - JSON RPC
-
-CORBA -- TCP
-
-SOAP -- WebService -- HTTP
-
-RESTFUL
+https://www.zhihu.com/question/304577684
 
 ## Gradle
 
@@ -1006,6 +1043,57 @@ groups $USER //查看当前用户所在群组
 sudo usermod -aG docker $USER //当前用户加入docker群组
 sudo reboot //重启系统
 ```
+
+# Blockchain
+
+## IBM
+
+https://hyperledgercn.github.io/hyperledgerDocs/
+
+https://developer.ibm.com/series/ibm-blockchain-platform-console-video-series/
+
+https://developer.ibm.com/cn/patterns/category/blockchain/
+
+https://cloud.ibm.com/docs/blockchain?topic=blockchain-blockchain-component-overview
+
+## Solidity
+
+- [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/)
+- [Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
+- [cryptozombies](https://cryptozombies.io/)
+- [Azure-Samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- Udacity
+  - [Supply chain & data auditing](https://github.com/udacity/nd1309-Project-6b-Example-Template)
+  - [Blockchain Capstone](https://github.com/udacity/Blockchain-Capstone)
+  - [FlightSurety](https://github.com/udacity/FlightSurety)
+- [solidity](https://solidity.readthedocs.io/en/v0.5.12/#)
+- [solidity style](https://solidity.readthedocs.io/en/latest/style-guide.html)
+
+## Security
+
+- [solidity security](https://solidity.readthedocs.io/en/latest/security-considerations.html)
+- [consensys Ethereum Smart Contract Best Practices](https://consensys.github.io/smart-contract-best-practices/)
+- [guylando Ethereum smart contracts security](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
+
+## Reference
+
+#### 
+
+- [thereum developers](https://ethereum.org/zh/developers/)
+- [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
+- [Docker](https://docs.docker.com/install/)
+- [ZoKrates](https://github.com/Zokrates/ZoKrates)
+- [provable](https://github.com/provable-things)
+- [docs.provable](https://docs.provable.xyz/#background)
+- [smart-contract-insecurity-bad-arithmetic](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2018/november/smart-contract-insecurity-bad-arithmetic/)
+
+- [consensys](https://consensys.net/developers/)
+- [ConsenSys ethereum-developer-tools-list](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
+- [kauri](https://kauri.io/)
+- [kauri Full Stack dApp Tutorial Series](https://kauri.io/full-stack-dapp-tutorial-series/5b8e401ee727370001c942e3/c)
+- [chainshot](https://www.chainshot.com/)
+- [blockgeeks](https://courses.blockgeeks.com/)
+- [dappuniversity](https://www.dappuniversity.com/)
 
 # 软件版本
 
