@@ -33,54 +33,6 @@
 13. resilio
 14. BaiduNetdiskDownload
 
-# 技术书
-
-《 Designing Data-Intensive Applications》
-
-《数据密集型应用系统设计》
-
-https://www.zhihu.com/tardis/zm/art/421245296?source_id=1005
-
-https://github.com/Vonng/ddia
-
-https://vonng.gitbooks.io/ddia-cn/content/
-
-------
-
-《微服务架构设计模式》
-
-# Tools
-
-## Install google play
-
-方法一：
-
-“谷歌服务下载器”App
-
-方法二：
-
-https://www.apkmirror.com/
-
-方法三：
-
-1. Google 服务框架
-2. Google Play Services
-3. Play Store
-
-## Axure RP Key
-
-Axure rp 9.0.0.3727
-
-Licensee:
-Freecrackdownload.com
-
-Key:
-5vYpJgQZ431X/G5kp6jpOO8Vi3TySCBnAslTcNcKkszfPH7jaM4eKM8CrALBcEC1
-
-## OBS Studio
-
-录屏
-
 # 设计原则
 
 - 多考虑一个量级
@@ -127,12 +79,6 @@ Apache Lucene set the standard for search and indexing performance. Lucene is th
 
 https://lucene.apache.org/
 
-# 开源
-
-**哪种协议**
-
-看软件作者的诉求， Apache v2/BSD/MIT/GPL/LGPL等都是常见的选择。一般来说，商业友好的License是Apache V2；学术界用的比较多的是BSD和MIT， 硬件或者内核相关用的是GPL和LGPL。
-
 # 架构
 
 ## Message
@@ -170,6 +116,256 @@ CORBA -- TCP
 SOAP -- WebService -- HTTP
 
 RESTFUL
+
+# Tools
+
+## Install google play
+
+方法一：
+
+“谷歌服务下载器”App
+
+方法二：
+
+https://www.apkmirror.com/
+
+方法三：
+
+1. Google 服务框架
+2. Google Play Services
+3. Play Store
+
+## Axure RP Key
+
+Axure rp 9.0.0.3727
+
+Licensee:
+Freecrackdownload.com
+
+Key:
+5vYpJgQZ431X/G5kp6jpOO8Vi3TySCBnAslTcNcKkszfPH7jaM4eKM8CrALBcEC1
+
+## OBS Studio
+
+录屏
+
+# DOCS
+
+[![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
+
+## 开源
+
+**哪种协议**
+
+看软件作者的诉求， Apache v2/BSD/MIT/GPL/LGPL等都是常见的选择。一般来说，商业友好的License是Apache V2；学术界用的比较多的是BSD和MIT， 硬件或者内核相关用的是GPL和LGPL。
+
+## 技术书
+
+《Designing Data-Intensive Applications》
+
+《数据密集型应用系统设计》
+
+https://www.zhihu.com/tardis/zm/art/421245296?source_id=1005
+
+https://github.com/Vonng/ddia
+
+https://vonng.gitbooks.io/ddia-cn/content/
+
+------
+
+《微服务架构设计模式》
+
+## DistroWatch
+
+[DistroWatch](https://distrowatch.com/)
+
+## GitLab
+
+[GitLab](https://about.gitlab.com/)
+
+安装 https://gitlab.cn/install/
+
+docker 安装 https://docs.gitlab.com/ee/install/docker.html
+
+服务器上的 Git - [GitLab](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-GitLab)
+
+GitLab 社区版的 [readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master) 文件
+
+GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
+
+[Maintenance commands](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)
+
+Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
+
+**Bitnami GitLab**
+
+If no IP address is assigned,try reloading the IP address by executing the command below.
+
+```
+sudo /etc/init.d/networking force-reload
+```
+
+[Start Or Stop Services](https://docs.bitnami.com/virtual-machine/apps/mediawiki/administration/control-services/)
+
+## CMS
+
+## Mediawiki
+
+https://bitnami.com/stack/mediawiki/installer
+
+https://bitnami.com/stack/mediawiki/README.txt
+
+## npm
+
+<https://www.npmjs.cn/>
+
+[Use Windows Build Tools npm module ](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run)
+
+```
+ npm install --global windows-build-tools --vs2015
+```
+
+## Git
+
+**Git SCM**
+
+Source code management
+
+**快照 **
+
+Snapshot: 某一时刻数据的状态
+
+快照流
+
+**book**
+
+https://git-scm.com/book/en/v2
+
+**对象**：commit，tree，blob
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+**引用**：refs
+
+https://git-scm.com/book/en/v2/Git-Internals-Git-References
+
+**删除敏感信息**
+
+https://docs.github.com/cn/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+
+**Command line instructions**
+
+Git global setup
+
+```
+git -c http.sslVerify=false clone 'url'
+
+git config --system --unset credential.helper
+git config --global http.sslVerify false  
+
+git push -u origin master
+
+git config --global user.name "0714weijia"
+git config --global user.email "zxll760606@sina.com"
+```
+
+Create a new repository
+
+```
+git clone https://gitlab.com/0714weijia/test.git
+cd test
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+```
+
+Existing folder
+
+```
+cd existing_folder
+git init
+git remote add origin https://gitlab.com/0714weijia/test.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
+
+Existing Git repository
+
+```
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://gitlab.com/0714weijia/test.git
+git push -u origin --all
+git push -u origin --tags
+```
+
+Status
+
+```
+git status --ignored
+git add -f <pathspec>
+```
+
+## Github
+
+**SSH key**
+
+[Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
+
+[Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+## Vagrant
+
+1. Install VirtualBox . [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)
+2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
+3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
+
+## OpenSSL
+
+[OpenSSL Cookbook](https://www.feistyduck.com/library/openssl-cookbook/)
+
+## KeyStore
+
+JKS
+
+- [Java KeyStore](https://en.wikipedia.org/wiki/Java_KeyStore)
+- [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html)
+
+## doc
+
+- JebBrains -- Writerside
+- Markdown
+  - 下载：[MarkdownPad](http://markdownpad.com/) is a full-featured Markdown editor for Windows.
+  - [Markdown 中文文档](https://markdown-zh.readthedocs.io/en/latest/)
+  - [Markdown 教程](https://www.runoob.com/markdown/md-tutorial.html)
+- Typora
+  - [Typora](https://typora.io/) — a markdown editor, markdown reader.
+
+## Linuxone
+
+```
+ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
+```
+
+## SMTP
+
+发送电子邮件的协议：SMTP
+
+接收电子邮件的协议：IMAP、POP
+
+IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上，消息可以在多个设备上同步和访问。
+
+POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
+
+## WebAssembly
+
+https://www.zhihu.com/question/304577684
+
+## Gradle
+
+https://scans.gradle.com/
 
 # Linux
 
@@ -724,192 +920,6 @@ HotSpot
 http://openjdk.java.net/groups/net/httpclient/
 
 https://docs.oracle.com/javase/tutorial/networking/index.html
-
-# DOCS #
-
-[![stable](https://img.shields.io/badge/stable-stable-green.svg)](url)
-
-## DistroWatch ##
-
-[DistroWatch](https://distrowatch.com/)
-
-## GitLab ##
-
-[GitLab](https://about.gitlab.com/)
-
-安装 https://gitlab.cn/install/
-
-docker 安装 https://docs.gitlab.com/ee/install/docker.html
-
-服务器上的 Git - [GitLab](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-GitLab)
-
-GitLab 社区版的 [readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master) 文件
-
-GitLab [compared](https://about.gitlab.com/devops-tools/) to other DevOps tools
-
-[Maintenance commands](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)
-
-Omnibus GitLab [documentation](https://docs.gitlab.com/omnibus/)
-
-**Bitnami GitLab**
-
-If no IP address is assigned,try reloading the IP address by executing the command below.
-
-	sudo /etc/init.d/networking force-reload
-
-[Start Or Stop Services](https://docs.bitnami.com/virtual-machine/apps/mediawiki/administration/control-services/)
-
-## CMS ##
-
-## Mediawiki ##
-
-https://bitnami.com/stack/mediawiki/installer
-
-https://bitnami.com/stack/mediawiki/README.txt
-
-## npm ##
-
-<https://www.npmjs.cn/>
-
-[Use Windows Build Tools npm module ](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run)
-
-```
- npm install --global windows-build-tools --vs2015
-```
-
-## Git ##
-
-**Git SCM**
-
-Source code management
-
-**快照 **
-
-Snapshot: 某一时刻数据的状态
-
-快照流
-
-**book**
-
-https://git-scm.com/book/en/v2
-
-**对象**：commit，tree，blob
-
-https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
-
-**引用**：refs
-
-https://git-scm.com/book/en/v2/Git-Internals-Git-References
-
-**删除敏感信息**
-
-https://docs.github.com/cn/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
-
-**Command line instructions**
-
-Git global setup
-
-	git -c http.sslVerify=false clone 'url'
-	
-	git config --system --unset credential.helper
-	git config --global http.sslVerify false  
-	
-	git push -u origin master
-	
-	git config --global user.name "0714weijia"
-	git config --global user.email "zxll760606@sina.com"
-
-Create a new repository
-
-	git clone https://gitlab.com/0714weijia/test.git
-	cd test
-	touch README.md
-	git add README.md
-	git commit -m "add README"
-	git push -u origin master
-
-Existing folder
-
-	cd existing_folder
-	git init
-	git remote add origin https://gitlab.com/0714weijia/test.git
-	git add .
-	git commit -m "Initial commit"
-	git push -u origin master
-
-Existing Git repository
-
-	cd existing_repo
-	git remote rename origin old-origin
-	git remote add origin https://gitlab.com/0714weijia/test.git
-	git push -u origin --all
-	git push -u origin --tags
-
-Status
-
-```
-git status --ignored
-git add -f <pathspec>
-```
-
-## Github ##
-
-**SSH key**
-
-[Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
-
-[Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-
-## Vagrant ##
-
-1. Install VirtualBox . [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)
-2. Install Vagrant. [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads.html)
-3. Get started with Vagrant https://www.vagrantup.com/intro/getting-started/index.html
-
-## OpenSSL
-
-[OpenSSL Cookbook](https://www.feistyduck.com/library/openssl-cookbook/)
-
-## KeyStore
-
-JKS
-
-- [Java KeyStore](https://en.wikipedia.org/wiki/Java_KeyStore)
-- [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html)
-
-## doc ##
-
-- JebBrains -- Writerside
-- Markdown
-  - 下载：[MarkdownPad](http://markdownpad.com/) is a full-featured Markdown editor for Windows.
-  - [Markdown 中文文档](https://markdown-zh.readthedocs.io/en/latest/)
-  - [Markdown 教程](https://www.runoob.com/markdown/md-tutorial.html)
-- Typora
-  - [Typora](https://typora.io/) — a markdown editor, markdown reader.
-
-## Linuxone
-
-```
-ssh linux1@148.100.245.68 -p 22 -i ~/.ssh/mykey.pem
-```
-
-## SMTP
-
-发送电子邮件的协议：SMTP
-
-接收电子邮件的协议：IMAP、POP
-
-IMAP：电子邮件存储在服务器上，发送的消息存储在服务器上，消息可以在多个设备上同步和访问。
-
-POP：电子邮件存储在一个设备上，发送的消息存储在单个设备上，电子邮件只能从单个设备访问。
-
-## WebAssembly
-
-https://www.zhihu.com/question/304577684
-
-## Gradle
-
-https://scans.gradle.com/
 
 # Docker
 
