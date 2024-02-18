@@ -15,6 +15,7 @@
 # 经验
 
 Java，JavaScript，Spring Security，Spring MVC，Blockchain，Android
+产品经理，项目管理，人员管理
 
 # 教育经历
 
