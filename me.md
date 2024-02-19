@@ -13,7 +13,7 @@
 
 # 经验
 
-Java，JavaScript，Spring，Blockchain，Android
+Java，JavaScript，Spring，Blockchain，Solidity，Android
 
 技术架构，项目管理，产品经理
 
