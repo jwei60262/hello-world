@@ -13,7 +13,13 @@
 
 # 经验
 
-Java，JavaScript，Spring，Blockchain，Solidity，Android
+Java，Spring，JPA
+
+Blockchain，Solidity
+
+Android
+
+JavaScript，HTML，CSS
 
 技术架构，项目管理，产品经理
 
