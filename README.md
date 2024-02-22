@@ -69,15 +69,15 @@ https://cloud.tencent.com/developer/article/1937815
 
 ## 全文检索
 
-### Elasticsearch
-
-### Apache Solr
-
 ### Lucene
 
 Apache Lucene set the standard for search and indexing performance. Lucene is the search core of both Apache Solr™ and Elasticsearch™.
 
 https://lucene.apache.org/
+
+### Elasticsearch
+
+### Apache Solr
 
 # 架构
 
