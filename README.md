@@ -33,6 +33,24 @@
 13. resilio
 14. BaiduNetdiskDownload
 
+# Tools
+
+## Install google play
+
+方法一：
+
+“谷歌服务下载器”App
+
+方法二：
+
+https://www.apkmirror.com/
+
+方法三：
+
+1. Google 服务框架
+2. Google Play Services
+3. Play Store
+
 # 设计原则
 
 - 多考虑一个量级
@@ -42,6 +60,43 @@
 - 模仿 spring boot 的做法，工具替代手工
 - 差异化就是大同小异
 - 可扩展性多使用多态
+
+# 进程
+
+## IPC
+
+- 管道
+- 消息队列
+- 共享内存
+- 信号量和 PV 操作
+- 信号
+- Socket
+
+- Binder 
+
+https://zhuanlan.zhihu.com/p/465574868
+
+## Android Binder
+
+**Binder驱动、内存映射**
+
+https://juejin.cn/post/6844904113046568973#heading-8
+
+https://zhuanlan.zhihu.com/p/35519585
+
+https://zhuanlan.zhihu.com/p/133638518
+
+**驱动程序**
+
+![](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/gettingstarted/images/whatisadriver01.png)
+
+**软件驱动程序**
+
+在用户模式下运行的组件称为应用程序，在内核模式下运行的组件称为“软件驱动程序” 。
+
+![](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/gettingstarted/images/whatisadriver03.png)
+
+https://learn.microsoft.com/zh-cn/windows-hardware/drivers/gettingstarted/what-is-a-driver-
 
 # 数据库
 
@@ -116,24 +171,6 @@ CORBA -- TCP
 SOAP -- WebService -- HTTP
 
 RESTFUL
-
-# Tools
-
-## Install google play
-
-方法一：
-
-“谷歌服务下载器”App
-
-方法二：
-
-https://www.apkmirror.com/
-
-方法三：
-
-1. Google 服务框架
-2. Google Play Services
-3. Play Store
 
 ## Axure RP Key
 
