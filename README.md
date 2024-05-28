@@ -1353,3 +1353,7 @@ nginx
 1. 使用docker logs name查看对应容器的日志，name为容器名称
 
 2. 如出现 `/etc/init.d/mysql: ERROR: The partition with /var/lib/mysql is too full!`则为存储空间不足，需要使用 `df -h `命令查看存储空间剩余，使用 `du -sh`查看当前目录下的空间占用
+
+YOUYOU
+
+2024.5.25 youyou撕坏了爷爷的一页书，没有人指责，自己哭了，好像在探索他人的反应，哭起来可以防御。
