@@ -344,6 +344,13 @@ git push -u origin --all
 git push -u origin --tags
 ```
 
+更新远程仓库地址
+
+```
+git remote -v
+git remote set-url origin https://new-repo-url.git
+```
+
 Status
 
 ```
