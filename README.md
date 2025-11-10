@@ -63,9 +63,59 @@ https://www.apkmirror.com/
 
 # 异步思考
 
-异步/同步：对手方风险，当前任务跟其他任务 or IO 的关系，用户进程跟系统内核之间的关系。
+异步是问题、环境、挑战、客观现实，解决方法有多线程，单线程非阻塞，多路复用。
 
-阻塞/非阻塞：自己对自己好不好，自己跟自己的关系。
+单线程实现事件驱动的非阻塞式机制，不是说不阻塞，而是说可以把任务放进事件队列，不要阻塞当前任务，当前任务处理完成之后，遍历事件队列随后处理。比如 Netty 正在处理读任务，临时产生了一个写操作，这个写操作不会立即执行、阻塞当前任务，而是调用内核方法、修改文件描述符，标记为写事件，在下一轮遍历事件队列时处理。单线程非阻塞机制，降低系统线程数量，减少线程切换开销。Nodejs 默认设计也是事件驱动的单线程非阻塞模型。
+
+select()、poll() 和 epoll() 都是操作系统提供的多路复用系统调用，它们用于在 Linux 上处理多个 I/O 操作，多路复用允许一个单独的进程或线程同时监视多个文件描述符（比如套接字、文件等），以便在这些文件描述符上发生 I/O 事件（如可读、可写等）时进行响应。
+
+Netty 利用了 select()、poll()、epoll() 实现 EventLoop IO 线程处理多个连接 Channel 通道任务的效果。这个过程虽然是在内核态完成的，但是向用户态 EventLoop IO 线程提供了一个队列的抽象。
+
+以下是`NioEventLoop` 类中的 `run()` 方法， `NioEventLoop` 中调用 `select()` 的相关代码片段，简化后的代码，帮助理解核心流程：
+
+    @Override
+    protected void run() {
+        final Selector selector = openSelector();  // 创建Selector
+        for (;;) {
+            try {
+                int readyChannels = selector.select(); // 调用select()来阻塞并等待事件
+                if (readyChannels == 0) {
+                    continue;
+                }
+    
+                // 处理已准备好的事件
+                Iterator<SelectionKey> selectedKeys = selector.selectedKeys().iterator();
+                while (selectedKeys.hasNext()) {
+                    SelectionKey key = selectedKeys.next();
+                    selectedKeys.remove();
+                    if (!key.isValid()) {
+                        continue;
+                    }
+    
+                    if (key.isAcceptable()) {
+                        // 处理接收事件
+                        handleAccept(key);
+                    }
+                    if (key.isReadable()) {
+                        // 处理可读事件
+                        handleRead(key);
+                    }
+                    if (key.isWritable()) {
+                        // 处理可写事件
+                        handleWrite(key);
+                    }
+                }
+            } catch (IOException e) {
+                // 异常处理
+                logger.error("Exception in NioEventLoop", e);
+            }
+        }
+    }
+Multiplexing enables **one thread to process multiple I/O handles**. Multi- refers to multiple tunnels, and -plex refers to the use of one or more fixed threads to process each Socket. Select, poll, and epoll are specific implementations of multiplexing I/O. A thread can obtain the data status of multiple tunnels in the kernel mode with one select call. Among them, select is only responsible for waiting, and recvfrom is only responsible for copying. In BIO, multiple file descriptors can be blocked and listened to. Therefore, it is a very efficient I/O model.
+
+还可以参考下面的资料。
+
+https://www.alibabacloud.com/blog/interview-questions-weve-learned-over-the-years-netty_601214
 
 # 进程
 
