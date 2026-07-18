@@ -92,3 +92,7 @@ https://www.credly.com/earner/earned/badge/8a9e6105-cc6e-438e-9326-4c291ee551b5
 软件技术千千万，难以穷尽，问题驱动，重方法，重思考。
 
 做开发需要洁癖和偏执，团队成长需要分享和争吵。
+
+
+
+https://jwc.xidian.edu.cn/info/1023/21003.htm
